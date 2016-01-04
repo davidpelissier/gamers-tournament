@@ -14,9 +14,11 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use for authentication
 gem 'devise'
-
 # Use to manage the access rights
 gem 'pundit'
+# Integration of Bootstrap
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
