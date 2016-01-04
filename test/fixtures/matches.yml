@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tournament_id: 1
+  map: MyString
+  team1_id: 1
+  team2_id: 1
+  score_team1: 1
+  score_team2: 1
+  stream: MyString
+
+two:
+  tournament_id: 1
+  map: MyString
+  team1_id: 1
+  team2_id: 1
+  score_team1: 1
+  score_team2: 1
+  stream: MyString

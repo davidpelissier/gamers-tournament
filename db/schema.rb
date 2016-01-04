@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(version: 20160104133638) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "matches", force: :cascade do |t|
+    t.integer  "tournament_id", limit: 4
+    t.string   "map",           limit: 255
+    t.integer  "team1_id",      limit: 4
+    t.integer  "team2_id",      limit: 4
+    t.integer  "score_team1",   limit: 4
+    t.integer  "score_team2",   limit: 4
+    t.string   "stream",        limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "tournaments", force: :cascade do |t|
     t.string   "name",         limit: 255
     t.text     "description",  limit: 65535
