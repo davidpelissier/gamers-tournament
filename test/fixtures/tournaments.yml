@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  game_id: 1
+  teams_limit: 1
+  signup_start: 2016-01-04 09:43:49
+  signup_end: 2016-01-04 09:43:49
+  check_in: 2016-01-04 09:43:49
+  date: 2016-01-04 09:43:49
+  mode: 1
+
+two:
+  name: MyString
+  description: MyText
+  game_id: 1
+  teams_limit: 1
+  signup_start: 2016-01-04 09:43:49
+  signup_end: 2016-01-04 09:43:49
+  check_in: 2016-01-04 09:43:49
+  date: 2016-01-04 09:43:49
+  mode: 1
