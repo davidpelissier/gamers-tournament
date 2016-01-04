@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :matches
   resources :bo_tournaments
   resources :tournaments
   resources :bos
