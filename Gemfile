@@ -19,6 +19,8 @@ gem 'pundit'
 # Integration of Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+# Integration of Normalize
+gem 'normalize-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
