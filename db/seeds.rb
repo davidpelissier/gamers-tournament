@@ -82,7 +82,7 @@ Tournament.create(tournaments)
 
 # Adding all the bo_tournaments
 bo_tournaments = [{
-  bo_id: 1,
+  bo_id: 2,
   tournament_id: 1
 },
 {
@@ -119,6 +119,51 @@ users = [{
 }]
 User.create(users)
 
-# Adding all the Matches
-# TODO Rajouter les seed pour les todo
+# Adding all the Teams
+teams = [{
+  name: "Navi",
+  location: "Ukraine"
+},
+{
+  name: "Envyus",
+  location: "France"
+},
+{
+  name: "Team Liquid",
+  location: "Etats-Unis"
+},
+{
+  name: "Titan",
+  location: "France"
+}]
+Team.create(teams)
 
+# Adding all the Matches
+matchs = [{
+  tournament_id: 1,
+  map: "DE_DUST2",
+  team1_id: 1,
+  team2_id: 2,
+  score_team1: 0,
+  score_team2: 0,
+  stream: "http://twitch/esl_csgo"
+},
+{
+  tournament_id: 1,
+  map: "DE_INFERNO",
+  team1_id: 1,
+  team2_id: 4,
+  score_team1: 0,
+  score_team2: 0,
+  stream: "http://twitch/esl_csgo"
+},
+{
+  tournament_id: 1,
+  map: "DE_CACHE",
+  team1_id: 1,
+  team2_id: 4,
+  score_team1: 0,
+  score_team2: 0,
+  stream: "http://twitch/esl_csgo"
+}]
+Match.create(matchs)

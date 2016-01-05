@@ -1,2 +1,47 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="row">
+  <div class="col-md-12">
+    <p id="notice"><%= notice %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <h1 class="page-header">Tournois à venir</h1>
+    <div class="row">
+      <% @tournaments.each do |tournament| %>
+      <div class="col-md-6">
+        <h2>
+          <%= tournament.name %><br>
+          <small><%= tournament.game %></small>
+        </h2>
+        <%= truncate(tournament.description, :length => 250, :omission => '[...]') %>
+        <p>
+          <%= link_to "Détail du tournoi", tournament, class: "btn btn-primary btn-sm pull-right", role: "button" %>        
+        </p>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+
+  <div class="col-md-4">
+    <h1 class="page-header">Derniers résultats</h1>
+    <div class="row">
+      <% @matchs.each do |match| %>
+      <div class="col-md-6">
+        <h4>
+          <%= match.tournament %><br>
+          <%= match.name_result %><br>
+          <small><%= match.tournament.game %></small>
+        </h4>
+        
+        <p>
+          <%= link_to "Détail du match", match, class: "btn btn-primary btn-sm pull-right", role: "button" %>
+        </p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- <%= link_to 'New Tournament', new_tournament_path %> -->

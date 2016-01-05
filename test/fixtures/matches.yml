@@ -20,7 +20,7 @@ two:
 
 three:
   tournament_id: 1
-  map: DE_INFERNO
+  map: DE_CACHE
   team1_id: 1
   team2_id: 4
   score_team1: 0

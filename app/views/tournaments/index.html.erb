@@ -3,37 +3,39 @@
     <h1 class="page-header">Liste des tournois</h1>
     <div class="row">
       <% @tournaments.each do |tournament| %>
-      <div class="col-md-2 col-sm-4">
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="<%= tournament.name %>" />
-      </div>
-      <div class="col-md-6 col-sm-8">
-        <h2>
-          <%= tournament.name %><br>
-          <small><%= tournament.game %></small>
-        </h2>
-        <%= truncate(tournament.description, :length => 250, :omission => '[...]') %>
-        <p>
-          <a class="btn btn-primary btn-sm pull-right" href="#" role="button">Détail du tournoi</a>
-        </p>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <table class="table">
-          <tr>
-            <th colspan="2">Inscriptions</th>
-          </tr>
-          <tr>
-            <td>Début : </td>
-            <td><%= tournament.signup_start.strftime("%d/%m/%Y à %H:%M") %></td>
-          </tr>
-          <tr>
-            <td>Clôture : </td>
-            <td><%= tournament.signup_end.strftime("%d/%m/%Y à %H:%M") %></td>
-          </tr>
-          <tr>
-            <th>Début du tournoi</td>
-            <td><%= tournament.date.strftime("%d/%m/%Y à %H:%M") %></td>
-          </tr>
-        </table>
+      <div class="row">
+        <div class="col-md-2 col-sm-4">
+          <img class="img-responsive" src="http://placehold.it/750x750" alt="<%= tournament.name %>" />
+        </div>
+        <div class="col-md-6 col-sm-8">
+          <h2>
+            <%= tournament.name %><br>
+            <small><%= tournament.game %></small>
+          </h2>
+          <%= truncate(tournament.description, :length => 250, :omission => '[...]') %>
+          <p>
+            <a class="btn btn-primary btn-sm pull-right" href="#" role="button">Détail du tournoi</a>
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <table class="table">
+            <tr>
+              <th colspan="2">Inscriptions</th>
+            </tr>
+            <tr>
+              <td>Début : </td>
+              <td><%= tournament.signup_start.strftime("%d/%m/%Y à %H:%M") %></td>
+            </tr>
+            <tr>
+              <td>Clôture : </td>
+              <td><%= tournament.signup_end.strftime("%d/%m/%Y à %H:%M") %></td>
+            </tr>
+            <tr>
+              <th>Début du tournoi</td>
+              <td><%= tournament.date.strftime("%d/%m/%Y à %H:%M") %></td>
+            </tr>
+          </table>
+        </div>
       </div>
       <% end %>
     </div>
