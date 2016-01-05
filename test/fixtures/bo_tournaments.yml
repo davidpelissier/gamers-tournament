@@ -5,5 +5,17 @@ one:
   tournament_id: 1
 
 two:
-  bo_id: 1
+  bo_id: 6
   tournament_id: 1
+
+three:
+  bo_id: 2
+  tournament_id: 2
+
+four:
+  bo_id: 5
+  tournament_id: 2
+
+six:
+  bo_id: 3
+  tournament_id: 3
