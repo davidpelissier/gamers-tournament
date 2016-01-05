@@ -12,7 +12,7 @@
       <div class="col-md-6">
         <h2>
           <%= tournament.name %><br>
-          <small><%= tournament.game.name %></small>
+          <small><%= tournament.game %></small>
         </h2>
         <%= truncate(tournament.description, :length => 250, :omission => '[...]') %>
         <p>
