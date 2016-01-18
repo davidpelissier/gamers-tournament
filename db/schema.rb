@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105095804) do
+ActiveRecord::Schema.define(version: 20160118122748) do
 
   create_table "bo_tournaments", force: :cascade do |t|
     t.integer  "bo_id",         limit: 4
@@ -34,15 +34,19 @@ ActiveRecord::Schema.define(version: 20160105095804) do
   end
 
   create_table "matches", force: :cascade do |t|
-    t.integer  "tournament_id", limit: 4
-    t.string   "map",           limit: 255
-    t.integer  "team1_id",      limit: 4
-    t.integer  "team2_id",      limit: 4
-    t.integer  "score_team1",   limit: 4
-    t.integer  "score_team2",   limit: 4
-    t.string   "stream",        limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.integer  "tournament_id",            limit: 4
+    t.string   "map",                      limit: 255
+    t.integer  "team1_id",                 limit: 4
+    t.integer  "team2_id",                 limit: 4
+    t.integer  "score_team1",              limit: 4
+    t.integer  "score_team2",              limit: 4
+    t.string   "stream",                   limit: 255
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.string   "screen_shot_file_name",    limit: 255
+    t.string   "screen_shot_content_type", limit: 255
+    t.integer  "screen_shot_file_size",    limit: 4
+    t.datetime "screen_shot_updated_at"
   end
 
   create_table "teams", force: :cascade do |t|

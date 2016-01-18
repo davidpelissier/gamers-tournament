@@ -32,6 +32,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use to make some random text
 gem "faker"
+# Use to make the upload
+gem "paperclip", "~> 4.3"
+# Use to make a JSon API
+gem "active_model_serializers"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -61,6 +61,13 @@ class MatchesController < ApplicationController
     end
   end
 
+  def remove_screen_shot
+    @match = Match.find(params[:id])
+    @match.screen_shot = nil
+    @match.save
+    redirect_to @match, flash: { success: 'Screen shot removed.' }
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_match
@@ -69,6 +76,6 @@ class MatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params
-      params.require(:match).permit(:tournament_id, :map, :team1_id, :team2_id, :score_team1, :score_team2, :stream)
+      params.require(:match).permit(:tournament_id, :map, :team1_id, :team2_id, :score_team1, :score_team2, :stream, :screen_shot)
     end
 end
