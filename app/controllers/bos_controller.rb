@@ -5,11 +5,20 @@ class BosController < ApplicationController
   # GET /bos.json
   def index
     @bos = Bo.all
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @bos, status: :ok }
+    end
   end
 
   # GET /bos/1
   # GET /bos/1.json
   def show
+    @bo = Bo.find(params[:id])
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @bo, status: :ok }
+    end
   end
 
   # GET /bos/new

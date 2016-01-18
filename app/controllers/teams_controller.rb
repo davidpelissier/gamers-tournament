@@ -5,11 +5,20 @@ class TeamsController < ApplicationController
   # GET /teams.json
   def index
     @teams = Team.all
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @teams, status: :ok }
+    end
   end
 
   # GET /teams/1
   # GET /teams/1.json
   def show
+    @team = Team.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @team, status: :ok }
+    end
   end
 
   # GET /teams/new

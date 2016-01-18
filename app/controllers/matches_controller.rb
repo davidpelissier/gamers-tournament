@@ -5,11 +5,20 @@ class MatchesController < ApplicationController
   # GET /matches.json
   def index
     @matches = Match.all
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @matches, status: :ok }
+    end
   end
 
   # GET /matches/1
   # GET /matches/1.json
   def show
+    @match = Match.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @match, status: :ok }
+    end
   end
 
   # GET /matches/new
