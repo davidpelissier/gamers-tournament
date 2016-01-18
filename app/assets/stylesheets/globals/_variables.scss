@@ -19,7 +19,7 @@ $font-family-title:       Raleway, Helvetica, Arial, sans-serif;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    $font-family-title;
-$headings-font-weight:    400;
+$headings-font-weight:    300;
 
 
 //== Components
@@ -29,3 +29,21 @@ $headings-font-weight:    400;
 $border-radius-base:        0px;
 $border-radius-large:       0px;
 $border-radius-small:       0px;
+
+
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+$navbar-height:                    60px;
+
+
+
+//== Jumbotron
+//
+//##
+
+$jumbotron-padding:              0px;
+

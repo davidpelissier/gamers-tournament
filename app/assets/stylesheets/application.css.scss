@@ -12,10 +12,10 @@
  *
  *= require normalize-rails
  *= require_self
- *= require ./base
- *= require ./layout
- *= require_tree ./modules
  */
 @import "globals/all";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "base";
+@import "layout";
+@import "modules/all";

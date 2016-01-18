@@ -1,8 +1,9 @@
 <div class="row">
   <div class="col-md-12">
-    <h1 class="page-header">Liste des tournois</h1>
+    <h1 class="page-header">Liste des <strong>tournois</strong></h1>
+
+    <% @tournaments.each do |tournament| %>
     <div class="row">
-      <% @tournaments.each do |tournament| %>
       <div class="col-md-2 col-sm-4">
         <img class="img-responsive" src="http://placehold.it/750x750" alt="<%= tournament.name %>" />
       </div>
@@ -35,8 +36,9 @@
           </tr>
         </table>
       </div>
-      <% end %>
     </div>
+    <hr />
+    <% end %>
 
   </div>
 </div>
