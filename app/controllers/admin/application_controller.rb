@@ -8,8 +8,9 @@ module Admin
   class ApplicationController < Administrate::ApplicationController
     before_filter :authenticate_admin
 
+    # Authentication logic
     def authenticate_admin
-      # TODO Add authentication logic here.
+      redirect_to root_path, notice: "Accès interdit !" unless current_user && current_user.admin?
     end
 
     # Override this value to specify the number of elements to display at a time
