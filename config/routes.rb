@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   resources :tournaments
   resources :bos
   resources :games
-
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
