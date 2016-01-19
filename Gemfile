@@ -21,6 +21,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 # Integration of Normalize
 gem 'normalize-rails'
+# Use for administration
+gem "administrate", "~> 0.1.2"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
