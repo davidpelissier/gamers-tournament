@@ -22,6 +22,8 @@
 
 .main {
   border-top: 2px solid darken($brand-primary, 15%);
+  border-bottom: 2px solid darken($brand-primary, 15%);
+  padding: 60px 0;
 }
 
 .page-header {
@@ -36,5 +38,8 @@
 }
 
 .footer {
+  background-color: #333333;
+  border-top: 4px solid $brand-primary;
+  color: #F8F8F8;
   padding: 20px 0;
 }

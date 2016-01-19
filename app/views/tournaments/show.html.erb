@@ -1,49 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="page-header">Tournoi <strong><%= @tournament.name %></strong></h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @tournament.name %>
-</p>
+    <div class="row">
+      <div class="col-md-2 col-sm-4">
+        <img class="img-responsive" src="http://placehold.it/750x750" alt="<%= @tournament.name %>" />
+      </div>
+      <div class="col-md-6 col-sm-8">
+        <p class="text-justify">
+          <%= @tournament.description %>
+        </p>
+        <dl class="dl-horizontal">
+          <dt>Jeu : </dt>
+          <dd><%= @tournament.game %></dd>
+          <dt>Nombre d'équipes : </dt>
+          <dd><%= @tournament.teams_limit %></dd>
+          <dt>Mode : </dt>
+          <dd><%= @tournament.mode %></dd>
+        </dl>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <table class="table">
+          <tr>
+            <th colspan="2">Inscriptions<i class="glyphicon glyphicon-check pull-right"></i></th>
+          </tr>
+          <tr>
+            <td>Début : </td>
+            <td><%= @tournament.signup_start.strftime("%d/%m/%Y à %H:%M") %></td>
+          </tr>
+          <tr>
+            <td>Clôture : </td>
+            <td><%= @tournament.signup_end.strftime("%d/%m/%Y à %H:%M") %></td>
+          </tr>
+          <tr>
+            <th>Début du tournoi</td>
+            <td><%= @tournament.date.strftime("%d/%m/%Y à %H:%M") %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <%= link_to 'Supprimer', @tournament, method: :delete, data: { confirm: "Etes-vous sur de supprimer ce tournoi ?" },  class: "btn btn-primary pull-right"  %>
+    <%= link_to 'Modifier', edit_tournament_path(@tournament), class: "btn btn-primary pull-right" %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @tournament.description %>
-</p>
-
-<p>
-  <strong>Game:</strong>
-  <%= @tournament.game_id %>
-</p>
-
-<p>
-  <strong>Teams limit:</strong>
-  <%= @tournament.teams_limit %>
-</p>
-
-<p>
-  <strong>Signup start:</strong>
-  <%= @tournament.signup_start %>
-</p>
-
-<p>
-  <strong>Signup end:</strong>
-  <%= @tournament.signup_end %>
-</p>
-
-<p>
-  <strong>Check in:</strong>
-  <%= @tournament.check_in %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @tournament.date %>
-</p>
-
-<p>
-  <strong>Mode:</strong>
-  <%= @tournament.mode %>
-</p>
-
-<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
-<%= link_to 'Back', tournaments_path %>
+  </div>
+</div>

@@ -12,15 +12,16 @@
           <%= tournament.name %><br>
           <small><%= tournament.game.name %></small>
         </h2>
-        <%= truncate(tournament.description, :length => 250, :omission => '[...]') %>
-        <p>
-          <a class="btn btn-primary btn-sm pull-right" href="#" role="button">Détail du tournoi</a>
+        <p class="text-justify">
+          <%= truncate(tournament.description, :length => 250, :omission => '[...]') %>
         </p>
+        <br />
+        <%= link_to 'Détail du tournoi', tournament, class:"btn btn-primary btn-sm pull-right" %>
       </div>
       <div class="col-md-4 col-sm-12">
         <table class="table">
           <tr>
-            <th colspan="2">Inscriptions</th>
+            <th colspan="2">Inscriptions<i class="glyphicon glyphicon-check pull-right"></i></th>
           </tr>
           <tr>
             <td>Début : </td>
@@ -42,5 +43,3 @@
 
   </div>
 </div>
-
-<!-- <%= link_to 'New Tournament', new_tournament_path %> -->
