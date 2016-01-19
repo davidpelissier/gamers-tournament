@@ -1,0 +1,25 @@
+<%= form_for(@bo_tournament) do |f| %>
+  <% if @bo_tournament.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bo_tournament.errors.count, "error") %> prohibited this bo_tournament from being saved:</h2>
+
+      <ul>
+      <% @bo_tournament.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bo_id %><br>
+    <%= f.collection_select(:bo_id, Bo.all, :id, :name_with_phase) %>
+  </div>
+  <div class="field">
+    <%= f.label :tournament_id %><br>
+    <%= f.collection_select(:tournament_id, Tournament.all, :id, :name) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

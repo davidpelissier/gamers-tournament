@@ -1,0 +1,28 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tournament_id: 1
+  map: DE_DUST2
+  team1_id: 1
+  team2_id: 2
+  score_team1: 0
+  score_team2: 0
+  stream: "http://twitch/esl_csgo"
+
+two:
+  tournament_id: 1
+  map: DE_INFERNO
+  team1_id: 1
+  team2_id: 4
+  score_team1: 0
+  score_team2: 0
+  stream: "Aucun stream disponible"
+
+three:
+  tournament_id: 1
+  map: DE_CACHE
+  team1_id: 1
+  team2_id: 4
+  score_team1: 0
+  score_team2: 0
+  stream: "Aucun stream disponible"

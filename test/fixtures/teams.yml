@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Navi
+  location: Ukraine
+
+two:
+  name: Envyus
+  location: France
+
+three:
+  name: "Team Liquid"
+  location: "Etats-Unis"
+
+four:
+  name: "Titan"
+  location: "France"

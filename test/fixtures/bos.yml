@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: BO1
+  phase: Poule
+
+two:
+  name: BO3
+  phase: Poule
+
+three:
+  name: BO5
+  phase: Poule
+
+four:
+  name: BO1
+  phase: Final
+
+five:
+  name: BO3
+  phase: Final
+
+six:
+  name: BO5
+  phase: Final

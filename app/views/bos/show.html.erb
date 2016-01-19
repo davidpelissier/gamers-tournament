@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bo.name %>
+</p>
+
+<p>
+  <strong>Phase:</strong>
+  <%= @bo.phase %>
+</p>
+
+<%= link_to 'Edit', edit_bo_path(@bo) %> |
+<%= link_to 'Back', bos_path %>
