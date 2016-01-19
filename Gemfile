@@ -53,6 +53,7 @@ group :development, :test do
   gem 'byebug'
   if RUBY_PLATFORM =~ /darwin/
     gem "mysql2", :platform => :ruby
+    gem 'tzinfo-data'
   else
     gem "mysql2", :platform => [:mswin, :mingw, :x64_mingw]
     # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -69,4 +70,5 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'tzinfo-data'
 end
