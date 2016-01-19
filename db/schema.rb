@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118122748) do
+ActiveRecord::Schema.define(version: 20160119154259) do
 
   create_table "bo_tournaments", force: :cascade do |t|
     t.integer  "bo_id",         limit: 4
@@ -54,6 +54,11 @@ ActiveRecord::Schema.define(version: 20160118122748) do
     t.string   "location",   limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "teams_users", id: false, force: :cascade do |t|
+    t.integer "team_id", limit: 4, null: false
+    t.integer "user_id", limit: 4, null: false
   end
 
   create_table "tournaments", force: :cascade do |t|

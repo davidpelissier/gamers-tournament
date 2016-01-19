@@ -10,12 +10,12 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  resources :teams
-  resources :matches
-  resources :bo_tournaments
-  resources :tournaments
-  resources :bos
-  resources :games
+  resources :teams, only: [:index, :show]
+  resources :matches, only: [:index, :show]
+  resources :bo_tournaments, only: [:index, :show]
+  resources :tournaments, only: [:index, :show]
+  resources :bos, only: [:index, :show]
+  resources :games, only: [:index, :show]
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.

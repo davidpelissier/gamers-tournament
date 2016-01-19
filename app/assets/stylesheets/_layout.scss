@@ -14,6 +14,10 @@
   }
 }
 
+.navbar {
+  span.glyphicon-left { padding-right: 8px; }
+}
+
 .jumbotron {
   background: asset-url('header.jpg') center center;
   border-bottom: 4px solid $brand-primary;
