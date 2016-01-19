@@ -27,6 +27,12 @@ Rails.application.routes.draw do
   # Remove the screenshot
   get 'match/:id/remove_screen_shot', to: 'matches#remove_screen_shot', as: 'remove_match_screen_shot'
 
+  # Add user to the team
+  get 'teams/:id/add_user', to: 'teams#add_user', as: 'add_user_to_team'
+
+  # Remove user from the team
+  get 'teams/:id/delete_user', to: 'teams#delete_user', as: 'delete_user_from_team'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -14,7 +14,7 @@
       <tr>
         <td><%= team.name %></td>
         <td><%= team.location %></td>
-        <td><%= link_to 'Voir', team %></td>
+        <td><%= link_to 'Voir', team %> <%= link_to 'Rejoindre', add_user_to_team_path(team.id) %></td>
       </tr>
     <% end %>
   </tbody>
