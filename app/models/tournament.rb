@@ -4,7 +4,7 @@ class Tournament < ActiveRecord::Base
   has_many :bos, through: :bo_tournaments
 
   def name_with_game
-    "#{name} (#{game.name})"
+    "#{name}"
   end
 
   def to_s

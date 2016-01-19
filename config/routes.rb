@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'welcome/index'
+
+  resources :teams
   resources :matches
   resources :bo_tournaments
   resources :tournaments
@@ -13,6 +16,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'tournaments#index'
+
+  # Remove the screenshot
+  get 'match/:id/remove_screen_shot', to: 'matches#remove_screen_shot', as: 'remove_match_screen_shot'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

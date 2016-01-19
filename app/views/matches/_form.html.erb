@@ -20,12 +20,12 @@
     <%= f.text_field :map %>
   </div>
   <div class="field">
-    <%= f.label :team1_id %><br>
-    <%= f.number_field :team1_id %>
+    <%= f.label :team1 %><br>
+    <%= f.collection_select(:team1_id, Team.all, :id, :name) %>
   </div>
   <div class="field">
-    <%= f.label :team2_id %><br>
-    <%= f.number_field :team2_id %>
+    <%= f.label :team2 %><br>
+    <%= f.collection_select(:team2_id, Team.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :score_team1 %><br>
@@ -38,6 +38,16 @@
   <div class="field">
     <%= f.label :stream %><br>
     <%= f.text_field :stream %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_shot %><br>
+    <% if @match.screen_shot.exists? %>
+    <p>
+      <%= image_tag @match.screen_shot.url(:medium) %>
+      <%= link_to 'Remove Screen shot', remove_match_screen_shot_path %>
+    </p>
+    <% end %>
+    <%= f.file_field :screen_shot %>
   </div>
   <div class="actions">
     <%= f.submit %>

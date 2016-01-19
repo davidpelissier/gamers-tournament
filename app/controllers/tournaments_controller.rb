@@ -5,11 +5,20 @@ class TournamentsController < ApplicationController
   # GET /tournaments.json
   def index
     @tournaments = Tournament.all
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @tournaments, status: :ok }
+    end
   end
 
   # GET /tournaments/1
   # GET /tournaments/1.json
   def show
+    @tournaments = Tournament.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @tournaments, status: :ok }
+    end
   end
 
   # GET /tournaments/new

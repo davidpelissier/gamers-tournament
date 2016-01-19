@@ -5,11 +5,20 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     @games = Game.all
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @games, status: :ok }
+    end
   end
 
   # GET /games/1
   # GET /games/1.json
   def show
+    @game = Game.new(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @game, status: :ok }
+    end
   end
 
   # GET /games/new
