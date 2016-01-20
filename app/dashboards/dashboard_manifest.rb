@@ -15,6 +15,7 @@ class DashboardManifest
     :bo_tournaments,
     :games,
     :matches,
+    :teams,
     :tournaments,
   ]
 

@@ -70,6 +70,22 @@ class TeamsController < ApplicationController
     end
   end
 
+  # GET /teams/add_user/1
+  # Add the current_user to the team passed in parameter
+  def add_user
+    @team = Team.find(params[:id])
+    @team.users << current_user
+    redirect_to @team
+  end
+
+  # DELETE /teams/delete_user/1
+  # Add the current_user to the team passed in parameter
+  def delete_user
+    @team = Team.find(params[:id])
+    @team.users.delete(current_user)
+    redirect_to @team
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_team

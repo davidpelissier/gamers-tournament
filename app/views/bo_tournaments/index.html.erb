@@ -17,13 +17,9 @@
         <td><%= bo_tournament.tournament %></td>
         <td><%= bo_tournament.bo %></td>
         <td><%= link_to 'Show', bo_tournament %></td>
-        <td><%= link_to 'Edit', edit_bo_tournament_path(bo_tournament) %></td>
-        <td><%= link_to 'Destroy', bo_tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Bo tournament', new_bo_tournament_path %>

@@ -17,13 +17,9 @@
         <td><%= bo.name %></td>
         <td><%= bo.phase %></td>
         <td><%= link_to 'Show', bo %></td>
-        <td><%= link_to 'Edit', edit_bo_path(bo) %></td>
-        <td><%= link_to 'Destroy', bo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Bo', new_bo_path %>

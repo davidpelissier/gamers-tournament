@@ -6,7 +6,7 @@
       <div class="col-md-2 col-sm-4">
         <img class="img-responsive" src="http://placehold.it/750x750" alt="<%= @tournament.name %>" />
       </div>
-      <div class="col-md-6 col-sm-8">
+      <div class="col-md-4 col-sm-8">
         <p class="text-justify">
           <%= @tournament.description %>
         </p>
@@ -38,9 +38,19 @@
           </tr>
         </table>
       </div>
+      <div class="col-md-2 col-sm-12">
+        Liste des équipes dans inscrites :
+        <ul>
+          <% @tournament.teams.each do |team| %>
+            <li>
+            <%= link_to team.name, team %>,
+            <% if current_user.teams.include?(team) %>
+              <%= link_to 'Quitter', leave_tournament_path(@tournament.id, team.id) %>
+            <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-    <%= link_to 'Supprimer', @tournament, method: :delete, data: { confirm: "Etes-vous sur de supprimer ce tournoi ?" },  class: "btn btn-primary pull-right"  %>
-    <%= link_to 'Modifier', edit_tournament_path(@tournament), class: "btn btn-primary pull-right" %>
-
   </div>
 </div>

@@ -14,14 +14,17 @@
       <tr>
         <td><%= team.name %></td>
         <td><%= team.location %></td>
-        <td><%= link_to 'Voir', team %></td>
-        <td><%= link_to 'Editer', edit_team_path(team) %></td>
-        <td><%= link_to 'Supprimer', team, method: :delete, data: { confirm: 'Etes vous sûr?' } %></td>
+        <td>
+          <%= link_to 'Voir', team %> 
+          <% if current_user.teams.include?(team) %>
+            <%= link_to 'Quitter', delete_user_from_team_path(team.id) %>
+          <% else %>
+            <%= link_to 'Rejoindre', add_user_to_team_path(team.id) %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'Créer une équipe', new_team_path, class: "btn btn-primary" %>
