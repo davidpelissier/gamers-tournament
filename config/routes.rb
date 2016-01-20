@@ -8,8 +8,6 @@ Rails.application.routes.draw do
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
 
-  get 'welcome/index'
-
   resources :teams, only: [:index, :show]
   resources :matches, only: [:index, :show]
   resources :bo_tournaments, only: [:index, :show]

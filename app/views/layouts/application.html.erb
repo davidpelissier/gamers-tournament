@@ -53,12 +53,10 @@
           </li>
           <% else %>
           <li>
-            <span class="glyphicon glyphicon-log-in glyphicon-left"></span> 
-            <%= link_to "Se connecter", new_user_session_path %>
+            <%= link_to raw("<span class='glyphicon glyphicon-log-in glyphicon-left'></span>Se connecter"), new_user_session_path %>
           </li>
           <li>
-            <span class="glyphicon glyphicon-plus glyphicon-left"></span> 
-            <%= link_to "Créer un compte", new_user_registration_path %>
+            <%= link_to raw("<span class='glyphicon glyphicon-plus glyphicon-left'></span>Créer un compte"), new_user_registration_path %>
           </li>
       	  <% end %>
         </ul>
