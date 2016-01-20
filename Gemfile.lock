@@ -118,7 +118,7 @@ GEM
     minitest (5.8.3)
     momentjs-rails (2.11.0)
       railties (>= 3.1)
-    mysql2 (0.4.2-x64-mingw32)
+    mysql2 (0.4.2)
     neat (1.7.2)
       bourbon (>= 4.0)
       sass (>= 3.3)
@@ -201,8 +201,6 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2015.7)
-      tzinfo (>= 1.0.0)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -241,7 +239,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   turbolinks
-  tzinfo-data
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 
