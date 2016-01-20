@@ -33,6 +33,12 @@ Rails.application.routes.draw do
   # Remove user from the team
   get 'teams/:id/delete_user', to: 'teams#delete_user', as: 'delete_user_from_team'
 
+  # Remove user from the team
+  get 'tournaments/:id_tournament/:id_team/enroll', to: 'tournaments#enroll', as: 'enroll_team_to_tournament'
+
+  # Remove user from the team
+  get 'tournaments/:id_tournament/:id_team/leave', to: 'tournaments#leave', as: 'leave_tournament'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

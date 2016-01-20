@@ -21,7 +21,9 @@
 		<% @team.users.each do |user| %>
 			<tr>
 				<td><%= user.username %></td>
+				<% if @team.users.include?(current_user) %>
 				<td><%= link_to "Partir", delete_user_from_team_path(@team.id) %></td>
+				<% end %>
 			</tr>
 		<% end %>
 		</tbody>	

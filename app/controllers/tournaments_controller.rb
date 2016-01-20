@@ -70,6 +70,34 @@ class TournamentsController < ApplicationController
     end
   end
 
+  # GET /tournaments/:id_tounament/:id_team/enroll
+  # Join the tournament
+  def enroll
+    @tournament = Tournament.find(params[:id_tournament])
+    @team       = Team.find(params[:id_team])
+    # check if the user can enroll
+    if current_user.teams.include?(@team) && !@tournament.teams.include?(@team)
+      @tournament.teams << @team
+      redirect_to @tournament, notice: 'Vous avez bien rejoint le tournoi'+ @tournament.name
+    else
+      redirect_to @tournament, notice: 'Vous n\'avez pas le droit de rejoindre le tournoi'+ @tournament.name
+    end
+  end
+
+  # DELETE /tournaments/:id_tounament/:id_team/leave
+  # Leave a tournament
+  def leave
+    @tournament = Tournament.find(params[:id_tournament])
+    @team       = Team.find(params[:id_team])
+    # check if the user can enroll
+    if current_user.teams.include?(@team) && @tournament.teams.include?(@team) 
+      @tournament.teams.delete(@team)
+      redirect_to @tournament, notice: 'Vous avez bien quitté le tournoi'+ @tournament.name
+    else
+      redirect_to @tournament, notice: 'Vous n\'avez pas le droit de quitter le tournoi'+ @tournament.name
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tournament
